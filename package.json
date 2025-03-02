@@ -15,6 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "test": "jest",
     "prettier:fix": "prettier ./src --write --log-level silent"
   },
   "version": "1.0.0"

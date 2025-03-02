@@ -9,9 +9,7 @@ const trampolineInternal = <T>(fn: T | Thunk<T>): T => {
   return fn;
 };
 
-const trampoline = <T extends AnyFn>(
-  makeFn: (fn: MirrorFn<T>) => T
-): MirrorFn<T> => {
+export const trampoline = <T extends AnyFn>(makeFn: (fn: MirrorFn<T>) => T): MirrorFn<T> => {
   const fn: T = makeFn((...args) => (() => fn(...args)) as ReturnType<T>);
   return (...args) => trampolineInternal(fn(...args));
 };

@@ -13,9 +13,3 @@ export const trampoline = <T extends AnyFn>(makeFn: (fn: MirrorFn<T>) => T): Mir
   const fn: T = makeFn((...args) => (() => fn(...args)) as ReturnType<T>);
   return (...args) => trampolineInternal(fn(...args));
 };
-
-const factorial = trampoline<(n: number, a?: number) => number>(
-  (fn) =>
-    (n, a = 1) =>
-      n === 0 ? a : fn(n - 1, n * a)
-);

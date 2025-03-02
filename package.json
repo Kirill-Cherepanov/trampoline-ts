@@ -1,15 +1,16 @@
 {
-  "name": "trampoline-ts",
-  "version": "1.0.0",
-  "description": "Trampoline function optimization in TypeScript",
-  "main": "./lib/trampoline-optimization.js",
-  "repository": "https://github.com/Kirill-Cherepanov/trampoline-ts.git",
   "author": "Kirill Cherepanov <cherkirr@gmail.com>",
+  "description": "Trampoline function optimization in TypeScript",
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.6",
     "typescript": "^5.8.2"
   },
-  "sideEffects": false
+  "license": "MIT",
+  "main": "./lib/trampoline-optimization.js",
+  "name": "trampoline-ts",
+  "repository": "https://github.com/Kirill-Cherepanov/trampoline-ts.git",
+  "sideEffects": false,
+  "version": "1.0.0"
 }
